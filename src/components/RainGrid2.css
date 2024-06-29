@@ -1,0 +1,76 @@
+/* RainGrid.css */
+.grid {
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .cell {
+    width: 35px;
+    height: 35px;
+     background-color: #444242;
+    border: 1px solid #000; /* Border for better visibility */
+  }
+  
+  .cell:first-child {
+    border-top: 0;
+  }
+  
+  .row:first-child .cell {
+    border-left: 0;
+  }
+  
+  .row .cell:not(:first-child) {
+    border-left: 0;
+  }
+  
+  .row:not(:first-child) .cell {
+    border-top: 0;
+  }
+  
+  .rain-0 {
+    animation: fall-red 2s infinite;
+  }
+  
+  .rain-1 {
+    animation: fall-blue 2s infinite;
+  }
+  
+  .rain-2 {
+    animation: fall-green 2s infinite;
+  }
+  
+  @keyframes fall-red {
+    0%, 100% {
+       background-color: #444242;
+    }
+    50% {
+      background-color: #f44336; /* Color when the rain is falling */
+    }
+  }
+  
+  @keyframes fall-blue {
+    0%, 100% {
+
+       background-color: #444242;
+
+    }
+    50% {
+      background-color: #2196F3; /* Color when the rain is falling */
+    }
+  }
+  
+  @keyframes fall-green {
+    0%, 100% {
+
+       background-color: #444242;
+    }
+    50% {
+      background-color: #4CAF50; /* Color when the rain is falling */
+    }
+  }
+  
